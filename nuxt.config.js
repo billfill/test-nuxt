@@ -97,6 +97,9 @@ module.exports = {
 				})();
     		`
     	},
+      {
+        src: 'https://cdn.jsdelivr.net/npm/vue'
+      }
     ],
     __dangerouslyDisableSanitizers: ['script'],
   },
