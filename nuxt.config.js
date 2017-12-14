@@ -1,6 +1,6 @@
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: './'
+    base: '/test-nuxt/'
   }
 } : {}
 module.exports = {
