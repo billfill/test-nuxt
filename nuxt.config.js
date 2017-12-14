@@ -16,7 +16,7 @@
 // }
 let routerBase;
 switch(process.env.DEPLOY_ENV){
-  case 'github':
+  case 'GH_PAGES':
     routerBase = {
       router: {
         base: '/test-nuxt/'
