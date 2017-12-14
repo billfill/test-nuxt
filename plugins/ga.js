@@ -13,4 +13,4 @@ ga('udn.send', 'pageview');
 ga('theme.send', 'pageview');
 ga('udn.send', 'event', '圖表看時事', 'view', '圖解新聞');
 
-console.log("GA loaded")
+console.log("GA loaded 123")
