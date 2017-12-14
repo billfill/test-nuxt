@@ -1,8 +1,36 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/test-nuxt/'
-  }
-} : {}
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     base: '/nuxt-test/'
+//   }
+// } : {}
+// const routerBase = if(process.env.DEPLOY_ENV === 'GH_PAGES'){
+//   router: {
+//     base: '/nuxt-test/'
+//   }  
+// } else if (process.env.DEPLOY_ENV === 'udn'){
+//   router: {
+//     base: '/upf/newmedia/2017_data/test-nuxt/'
+//   }  
+// } else {
+//   {}
+// }
+let routerBase;
+switch(process.env.DEPLOY_ENV){
+  case 'github':
+    routerBase = {
+      router: {
+        base: '/test-nuxt/'
+      }
+    }
+    break;
+  case 'udn':
+    routerBase = {
+      router: { 
+        base: '/upf/newmedia/2017_data/test-nuxt/'
+      }
+    }
+    break;
+}
 module.exports = {
   head: {
     title: '這是一個練習',
@@ -105,6 +133,7 @@ module.exports = {
   },
   loading: { color: '#3B8070' },
   build: {
+    publicPath: '/_nuxt/',
     vendor: ['axios', 'babel-polyfill'],
     postcss: [
 	    require('postcss-nested')(),
