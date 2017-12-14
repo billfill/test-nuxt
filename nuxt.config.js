@@ -102,6 +102,7 @@ module.exports = {
   },
   loading: { color: '#3B8070' },
   build: {
+    vendor: ['axios', 'babel-polyfill'],
     postcss: [
 	    require('postcss-nested')(),
 	    require('postcss-responsive-type')(),
