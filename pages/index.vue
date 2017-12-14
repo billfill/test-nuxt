@@ -30,8 +30,6 @@ export default {
   },
   mounted() {
   	console.log('mounted')
-  	console.log(process.env.BASE_URL)
-  	console.log(process)
   	this.update()
   	window.addEventListener('scroll', this.onScroll, {passive: false})
   },
