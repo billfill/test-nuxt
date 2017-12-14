@@ -1,5 +1,5 @@
 <template>
-	<div class="good">
+	<div class="good" @click="handle_Click">
 		<div>{{last_known_scroll_position}}</div>
 	</div>
 </template>
@@ -27,6 +27,9 @@ export default {
   		console.log(window.scrollY)
   		// console.log(this)
   	},
+    handle_Click() {
+      console.log('clicked')
+    }
   },
   mounted() {
   	console.log('mounted')
