@@ -3,7 +3,7 @@ switch(process.env.DEPLOY_ENV){
   case 'GH_PAGES':
     routerBase = {
       router: {
-        base: './'
+        base: '/./'
       }
     }
     break;
