@@ -1,19 +1,3 @@
-// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-//   router: {
-//     base: '/nuxt-test/'
-//   }
-// } : {}
-// const routerBase = if(process.env.DEPLOY_ENV === 'GH_PAGES'){
-//   router: {
-//     base: '/nuxt-test/'
-//   }  
-// } else if (process.env.DEPLOY_ENV === 'udn'){
-//   router: {
-//     base: '/upf/newmedia/2017_data/test-nuxt/'
-//   }  
-// } else {
-//   {}
-// }
 let routerBase;
 switch(process.env.DEPLOY_ENV){
   case 'GH_PAGES':
